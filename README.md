@@ -1,23 +1,36 @@
-### ¡Hola! / Hi! 👋 I'm Wendy — Backend Developer (Python)
+# Wendy Gómez
 
-Backend engineer focused on **Python**, with 4+ years building and operating production systems. I care about **Clean Architecture**, testable code, and software that handles money correctly (append-only ledgers, durable idempotency, transactional consistency).
+**Backend Engineer · Platform ownership · Python · PostgreSQL · Docker · CI/CD · Linux** — I build and operate production systems, and I'm moving toward platform engineering.
 
-🛠️ **Stack:** Python · FastAPI · Flask · PostgreSQL · SQLAlchemy 2.0 (async) · Alembic · Redis · Pydantic v2 · Docker · GitHub Actions · pytest · mypy (strict) · Clean Architecture · TDD
+Based in Bogotá (GMT-5) · Remote, working with teams in EST · English B2
 
 ---
 
-🔭 **Currently building**
+### How I work
 
-- **Travel Savings Platform** — fintech backend (FastAPI + Clean Architecture): append-only financial ledger, money modeled as an immutable value object (Decimal), durable idempotency for deposits (DB UNIQUE key + replay), 69 tests against a real Postgres.
-- **ASOPETROL platform** — production backend for an energy-sector client: refactored a 1,494-line Flask monolith (−92%), 104 tests with 84% coverage, CI/CD in GitHub Actions, SQLite → PostgreSQL (Supabase) migration with 2,000+ records.
-- Exploring **AI coding agents** (OpenClaw-based) with Clean Architecture and test-first refactoring.
+- **Tests before refactors.** A test suite that captures current behaviour is the only safe way to change production code.
+- **Least privilege by default.** Separate database roles for migrations and runtime; the application cannot alter the schema.
+- **Operable by design.** Health and readiness endpoints, structured logs with request IDs, encrypted backups with a restore that has actually been tested.
+- **Decisions written down.** ADRs, runbooks, and technical debt logged the day it is taken — not the day it hurts.
 
-📌 **Featured projects**
+### Featured projects
 
-- [travel-savings-platform](https://github.com/WendyKatherine/travel-savings-platform) — programmed-savings fintech backend: append-only ledger + durable idempotency (FastAPI, PostgreSQL, Redis)
-- [pricing-service](https://github.com/WendyKatherine/pricing-service) — pricing microservice extracted from a legacy monolith (Node/TypeScript, Fastify, Docker, Prometheus)
-- [openclaw-code-agent](https://github.com/WendyKatherine/openclaw-code-agent) — AI coding agent with Clean Architecture and test-first refactoring
+**[energy-sector-reference-api](https://github.com/WendyKatherine/energy-sector-reference-api)** — reference API for an event and registration platform. Capacity control under concurrency (row-level locking plus a unique constraint), idempotent registrations, RFC 7807 errors, two database roles, multi-stage non-root image, and Terraform to AWS.
 
-📫 **Get in touch**
+**[travel-savings-platform](https://github.com/WendyKatherine/travel-savings-platform)** — fintech backend: append-only ledger, money as an immutable Decimal value object, durable idempotency enforced by a database unique key, and 69 tests including integration against a real Postgres.
 
-- [LinkedIn](https://www.linkedin.com/in/wendy-katherine-gomez-villa-536964241/) · ✉️ wendykatherinnegomezv@gmail.com
+**[pricing-service](https://github.com/WendyKatherine/pricing-service)** — pricing microservice with ports and adapters, failures modelled as typed values, layered tests, CI/CD to Oracle Cloud, and an observability endpoint used by the DevOps team.
+
+### Stack
+
+Python · FastAPI · Flask · SQLAlchemy 2.0 · Alembic · PostgreSQL · Redis · Pydantic · Docker · GitHub Actions · pytest · mypy · Terraform · Linux
+
+### Currently
+
+Working through a platform roadmap on a production codebase: environment-based configuration, health checks, structured logging, least-privilege database roles, container images, and infrastructure as code.
+
+I'm interested in backend and platform teams where the platform is treated as a product — building the path other teams use to ship.
+
+### Get in touch
+
+[LinkedIn](https://www.linkedin.com/in/wendy-katherine-gomez-villa-536964241/) · wendykatherinnegomezv@gmail.com
